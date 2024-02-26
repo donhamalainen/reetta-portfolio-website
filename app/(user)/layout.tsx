@@ -10,16 +10,22 @@ const AuthorVariable = localFont({
   src: "../../public/fonts/Author-Variable.woff2",
   display: "swap",
   variable: "--font-AuthorVariable",
+  preload: true,
+  adjustFontFallback: "Arial",
 });
 const AuthorVariableItalic = localFont({
   src: "../../public/fonts/Author-VariableItalic.woff2",
   display: "swap",
   variable: "--font-AuthorVariableItalic",
+  preload: true,
+  adjustFontFallback: "Arial",
 });
 const MelodramaVariable = localFont({
   src: "../../public/fonts/Melodrama-Variable.woff2",
   display: "swap",
   variable: "--font-MelodramaVariable",
+  preload: true,
+  adjustFontFallback: "Arial",
 });
 export async function generateMetadata(): Promise<Metadata> {
   return {
