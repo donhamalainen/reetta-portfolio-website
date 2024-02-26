@@ -17,10 +17,6 @@ const nextConfig = {
         destination: "/blog/:slug*", // Matched parameters can be used in the destination
       },
       {
-        source: "/kuvat",
-        destination: "/picture", // Matched parameters can be used in the destination
-      },
-      {
         source: "/cv",
         destination: "/cv.pdf", // Matched parameters can be used in the destination
       },

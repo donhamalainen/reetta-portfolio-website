@@ -11,12 +11,12 @@ const config: Config = {
       fontFamily: {
         author: ["var(--font-AuthorVariable)"],
         authorItalic: ["var(--font-AuthorVariableItalic)"],
-        //mono: ["var(--font-roboto-mono)"],
+        melodrama: ["var(--font-MelodramaVariable)"],
       },
       colors: {
         primary: {
           light: "#d1ebfe", // vaalea tila
-          dark: "#083c5a", // tumma tila
+          dark: "#176B87", // tumma tila
         },
         // Voit lisätä muita värejä tässä
       },
