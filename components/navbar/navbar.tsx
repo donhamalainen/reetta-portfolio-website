@@ -63,7 +63,7 @@ export default function Navbar() {
         <Link
           onClick={() => setIsMobile(false)}
           href="/"
-          className="text-primary-light border-primary-light border-2 leading-none rounded-full py-2 px-4 font-author"
+          className="text-secondary-darkText bg-primary-secondBackground leading-none rounded-full py-2 px-4 font-author"
         >
           Reetta Salmela
         </Link>
@@ -79,8 +79,8 @@ export default function Navbar() {
                 href={`${item.href}`}
                 className={`block px-4 py-2 font-author cursor-pointer ${
                   item.text === "CV"
-                    ? "text-primary-light flex justify-center items-center w-10 h-10 border-solid border-2 border-primary-light rounded-full "
-                    : "text-primary-light"
+                    ? "text-secondary-darkText flex justify-center items-center w-10 h-10 bg-primary-secondBackground rounded-full "
+                    : "text-secondary-darkText"
                 }`}
                 onClick={() => setIsMobile(false)}
               >
@@ -96,15 +96,15 @@ export default function Navbar() {
               <span
                 className={`block w-8 h-0.5 transform transition-transform duration-300 ease-in-out ${
                   mobile
-                    ? "rotate-45 translate-y-1.5 bg-primary-dark"
-                    : "bg-primary-light"
+                    ? "rotate-45 translate-y-1.5 bg-secondary-darkText"
+                    : " bg-secondary-darkText"
                 }`}
               />
               <span
                 className={`block w-8 h-0.5  transform transition-transform duration-300 ease-in-out ${
                   mobile
-                    ? "-rotate-45 -translate-y-1 bg-primary-dark"
-                    : "bg-primary-light"
+                    ? "-rotate-45 -translate-y-1 bg-secondary-darkText"
+                    : "bg-secondary-darkText"
                 }`}
               />
             </div>
@@ -118,7 +118,7 @@ export default function Navbar() {
           initial="hidden"
           animate="visible"
           variants={backdropVariants}
-          className="absolute top-0 right-0 left-0 w-full h-screen bg-primary-light md:hidden -z-10"
+          className="absolute top-0 right-0 left-0 w-full h-screen bg-primary-secondBackground md:hidden -z-10"
         >
           <div className="text-xl h-full grid grid-rows-2 text-center">
             <nav className="row-start-1 flex flex-col justify-end gap-5">
@@ -132,7 +132,7 @@ export default function Navbar() {
                   <motion.li key={i} variants={itemVariants}>
                     <Link
                       href={`${item.href}`}
-                      className="block px-4 py-2 text-primary-dark font-author cursor-pointer"
+                      className="block px-4 py-2 text-secondary-darkText font-author cursor-pointer"
                       onClick={() => setIsMobile(false)}
                     >
                       {item.text}

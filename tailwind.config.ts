@@ -14,9 +14,13 @@ const config: Config = {
         melodrama: ["var(--font-MelodramaVariable)"],
       },
       colors: {
+        secondary: {
+          darkText: "#395886",
+          lightText: "#d5deef",
+        },
         primary: {
-          light: "#d1ebfe", // vaalea tila
-          dark: "#176B87", // tumma tila
+          background: "#f0f3fa",
+          secondBackground: "#d5deef",
         },
         // Voit lisätä muita värejä tässä
       },
