@@ -3,6 +3,7 @@ import type { Viewport } from "next";
 import "@/styles/globals.css";
 
 import localFont from "next/font/local";
+import { Darker_Grotesque } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 
@@ -20,13 +21,8 @@ const AuthorVariableItalic = localFont({
   preload: true,
   adjustFontFallback: "Arial",
 });
-const MelodramaVariable = localFont({
-  src: "../../public/fonts/Melodrama-Variable.woff2",
-  display: "swap",
-  variable: "--font-MelodramaVariable",
-  preload: true,
-  adjustFontFallback: "Arial",
-});
+
+const DarkerGrotesque = Darker_Grotesque({ subsets: ["latin"] });
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
@@ -54,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="fi" suppressHydrationWarning>
       <body
-        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${MelodramaVariable.variable} scroll-smooth`}
+        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${DarkerGrotesque.className} scroll-smooth`}
       >
         <Navbar />
         {children}
