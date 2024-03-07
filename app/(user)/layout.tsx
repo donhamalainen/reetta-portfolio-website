@@ -5,7 +5,6 @@ import "@/styles/globals.css";
 import localFont from "next/font/local";
 import { Darker_Grotesque } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
 
 const AuthorVariable = localFont({
   src: "../../public/fonts/Author-Variable.woff2",
@@ -50,11 +49,10 @@ export default function RootLayout({
   return (
     <html lang="fi" suppressHydrationWarning>
       <body
-        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${DarkerGrotesque.className} scroll-smooth`}
+        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${DarkerGrotesque.className} scroll-smooth overscroll-none`}
       >
         <Navbar />
-        {children}
-        <Footer />
+        <main>{children}</main>
       </body>
     </html>
   );

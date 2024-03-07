@@ -5,5 +5,8 @@
 @layer base {
   body {
     @apply bg-primary-background;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 }
