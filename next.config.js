@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       // TODO
       {
-        source: "/tietoa",
+        source: "/yhteistiedot",
         destination: "/about",
       },
       {
