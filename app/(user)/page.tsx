@@ -47,16 +47,20 @@ export default function Home() {
             <h1 className="text-4xl">Moikka! Huippua, että olet täällä.</h1>
             <p className="text-base md:text-xl mt-5">
               Minä olen Reetta Salmela, parikymppinen journalistiopiskelija
-              Oulusta. Tällä sivustolla pääset tutustumaan työnäytteisiini, sekä
-              -historiaani. Kiinnostus yhteiskunnallisiin asioihin heräsi
-              minulle jo nuorena ja olen aina halunnut olla vaikuttajan
-              asemassa. Tästä kertoo pitkä taustani erilaisen yhdistystoiminnan
-              ja opiskelijakuntien jäsenenä. Luonteeltani olen sosiaalinen ja
-              puhelias. Lapsuuteni olen viettänyt erilaisten pallopelien parissa
-              ja kokemusta tiimeissä toimimisesta löytyy sen ansiosta runsaasti.
-              Innostun asioista helposti ja pyrin toimimaan tehokkaasti
-              edistääkseni niitä. Kerron mielelläni lisää, olethan minuun
-              yhteydessä, mikäli mielenkiinto heräsi!
+              Oulusta.
+              <br />
+              Kiinnostus yhteiskunnallisiin asioihin heräsi minulle jo nuorena
+              ja olen aina halunnut olla vaikuttajan asemassa. Tästä kertoo
+              pitkä taustani erilaisen yhdistystoiminnan ja opiskelijakuntien
+              jäsenenä.
+              <br />
+              Luonteeltani olen sosiaalinen ja puhelias. Lapsuuteni olen
+              viettänyt erilaisten pallopelien parissa ja kokemusta tiimeissä
+              toimimisesta löytyy sen ansiosta runsaasti. Innostun asioista
+              helposti ja pyrin toimimaan tehokkaasti edistääkseni niitä.
+              <br />
+              Kerron mielelläni lisää, olethan minuun yhteydessä, mikäli
+              mielenkiinto heräsi!
             </p>
           </div>
 

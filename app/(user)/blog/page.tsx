@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function blog() {
-  return <div>blog</div>;
+export default function Blog() {
+  return (
+    <>
+      <section className="px-10 grid">Blog</section>
+    </>
+  );
 }
