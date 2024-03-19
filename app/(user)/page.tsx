@@ -32,9 +32,9 @@ export default function Home() {
           <div className="relative lg:col-start-1 lg:col-end-12">
             <Image
               src={section_oneImage}
-              alt="Kuva Reetta Salmela OAMK:in portaissa"
+              alt="Kuva Reetta Salmela OAMK:in portaissa "
               priority
-              className="h-[clamp(450px,5vw,60vh)] object-cover"
+              className="h-[clamp(450px,5vw,60vh)] object-cover object-[60%50%] md:object-center"
             />
             <div className="absolute left-0 right-0 bottom-0 top-0 bg-secondary-darkText/20" />
           </div>

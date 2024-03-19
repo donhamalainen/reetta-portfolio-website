@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 
 import localFont from "next/font/local";
 import { Darker_Grotesque } from "next/font/google";
-import Navbar from "@/components/navbar/navbar";
+import Navbar from "@/components/navbar/Navbar";
 
 const AuthorVariable = localFont({
   src: "../../public/fonts/Author-Variable.woff2",
@@ -32,6 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: "",
   };
 }
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
