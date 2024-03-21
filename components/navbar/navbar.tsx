@@ -10,17 +10,21 @@ import getSanityCVData from "@/hooks/getSanityCVData";
 
 export default function Navbar() {
   // Attributes
+  const [cvUrlLoading, setCvUrlLoading] = useState(false);
   const [cvUrl, setCvUrl] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [time, setTime] = useState("--------");
 
   useEffect(() => {
     async function getDataFromHookSanity() {
+      setCvUrlLoading(true);
       try {
         const data = await getSanityCVData();
         setCvUrl(data);
+        setCvUrlLoading(false);
       } catch (error) {
         console.error(error + " Failed to fetch data from Sanity");
+        setCvUrlLoading(false);
       }
     }
     getDataFromHookSanity();
@@ -77,11 +81,21 @@ export default function Navbar() {
               <Link href="/yhteistiedot">Yhteistiedot</Link>
             </li>
 
-            <li className="text-secondary-darkText text-lg">
-              <Link rel="noopener noreferrer" target="_blank" href={`${cvUrl}`}>
-                Ansioluettelo
-              </Link>
-            </li>
+            {cvUrlLoading ? (
+              <p>Haetaan ansioluetteloa...</p>
+            ) : cvUrl == null ? (
+              <></>
+            ) : (
+              <li className="text-secondary-darkText text-lg">
+                <Link
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={`${cvUrl}`}
+                >
+                  Ansioluettelo
+                </Link>
+              </li>
+            )}
 
             <li className="text-secondary-darkText text-lg flex items-center p-2 border-2 border-secondary-darkText rounded-full">
               <a
