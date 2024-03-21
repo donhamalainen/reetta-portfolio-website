@@ -24,6 +24,7 @@ export default defineType({
       title: "CV Tiedosto",
       description: "Liitä tähän ansioluettelosi PDF muodossa",
       type: "file",
+      validation: (rule) => rule.required(),
     }),
   ],
 });
