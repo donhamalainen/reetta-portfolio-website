@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 
 import localFont from "next/font/local";
 import { Darker_Grotesque } from "next/font/google";
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/NavbarComponent";
 
 const AuthorVariable = localFont({
   src: "../../public/fonts/Author-Variable.woff2",
