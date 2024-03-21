@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useState } from "react";
-import { client } from "@/sanity/lib/client";
 
 // ICONS
 import { FaLinkedinIn } from "react-icons/fa";
 import getFinnishTime from "@/hooks/getTime";
+import getSanityCVData from "@/hooks/getSanityCVData";
 
 export default function Navbar() {
   // Attributes
@@ -14,23 +14,19 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [time, setTime] = useState("--------");
 
-  useLayoutEffect(() => {
-    async function getSanityCVData() {
-      const query = `*[_type == "yhteistiedot"][0]{
-        cv_file{
-          "CV_URL": asset->url
-        }
-      }`;
+  useEffect(() => {
+    async function getDataFromHookSanity() {
       try {
-        const data = await client.fetch(query);
-        setCvUrl(data.cv_file.CV_URL);
+        const data = await getSanityCVData();
+        setCvUrl(data);
       } catch (error) {
-        console.error("Failed to fetch CV data from Database", error);
+        console.error(error + " Failed to fetch data from Sanity");
       }
     }
-    getSanityCVData();
+    getDataFromHookSanity();
   }, []);
 
+  // SCROLL STOPPER
   useEffect(() => {
     const scrollStopper = () => {
       document.body.style.overflow = isMobile ? "hidden" : "auto";
@@ -38,7 +34,6 @@ export default function Navbar() {
 
     return scrollStopper();
   }, [isMobile]);
-
   // TIME
   useEffect(() => {
     const intervalID = setInterval(() => {
@@ -47,7 +42,7 @@ export default function Navbar() {
     }, 500);
     return () => clearInterval(intervalID);
   });
-
+  // CHECK WIDTH
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -82,19 +77,11 @@ export default function Navbar() {
               <Link href="/yhteistiedot">Yhteistiedot</Link>
             </li>
 
-            {cvUrl == null ? (
-              <></>
-            ) : (
-              <li className="text-secondary-darkText text-lg">
-                <Link
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={`${cvUrl}`}
-                >
-                  Ansioluettelo
-                </Link>
-              </li>
-            )}
+            <li className="text-secondary-darkText text-lg">
+              <Link rel="noopener noreferrer" target="_blank" href={`${cvUrl}`}>
+                Ansioluettelo
+              </Link>
+            </li>
 
             <li className="text-secondary-darkText text-lg flex items-center p-2 border-2 border-secondary-darkText rounded-full">
               <a
