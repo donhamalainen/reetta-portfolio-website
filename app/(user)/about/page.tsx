@@ -19,7 +19,7 @@ export default function about() {
           <h2 className="text-[clamp(48px,5vw,120px)] leading-none font-bold text-secondary-darkText">
             Yhteistiedot.
           </h2>
-          <p className="py-4 text-[clamp(38px,5vw,48px)]">
+          <p className="py-4 text-[clamp(38px,5vw,48px)] text-black">
             Olen iloinen, että olette kiinnostunut ottamaan minuun yhteyttä.
           </p>
           <div className="w-full h-[1px] bg-neutral-300" />
