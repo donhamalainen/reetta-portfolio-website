@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // ICONS
 import { FaLinkedinIn } from "react-icons/fa";
@@ -149,10 +149,12 @@ export default function Navbar() {
                   </Link>
                 </li>
 
-                {cvUrl == null ? (
+                {cvUrlLoading ? (
+                  <p>Haetaan ansioluetteloa...</p>
+                ) : cvUrl == null ? (
                   <></>
                 ) : (
-                  <li className="text-secondary-darkText text-4xl flex justify-center items-center">
+                  <li className="text-black text-4xl flex justify-center items-center">
                     <Link
                       onClick={() => setIsMobile(false)}
                       rel="noopener noreferrer"
@@ -165,7 +167,7 @@ export default function Navbar() {
                 )}
                 <p
                   aria-label="hidden"
-                  className="absolute left-5 bottom-5 text-[clamp(48px,10vw,80px)]"
+                  className="absolute left-5 bottom-5 text-[clamp(48px,10vw,60px)] italic"
                 >
                   {time}
                 </p>

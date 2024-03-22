@@ -20,8 +20,7 @@ export default function FormComponent() {
           type="text"
           id="name"
           name="name"
-          placeholder=" "
-          className="border border-gray-300 rounded-md px-3 py-2 w-full"
+          className="rounded-md px-3 py-2 w-full bg-primary-secondBackground"
         />
       </div>
 
@@ -34,7 +33,7 @@ export default function FormComponent() {
           id="email"
           name="email"
           required
-          className="border border-gray-300 rounded-md px-3 py-2 w-full"
+          className="rounded-md px-3 py-2 w-full bg-primary-secondBackground"
         />
       </div>
       <div className="mb-4">
@@ -45,7 +44,7 @@ export default function FormComponent() {
           type="text"
           id="company"
           name="company"
-          className="border border-gray-300 rounded-md px-3 py-2 w-full"
+          className="rounded-md px-3 py-2 w-full bg-primary-secondBackground"
         />
       </div>
       <div className="mb-4">
@@ -56,7 +55,7 @@ export default function FormComponent() {
           type="tel"
           id="phone"
           name="phone"
-          className="border border-gray-300 rounded-md px-3 py-2 w-full"
+          className="rounded-md px-3 py-2 w-full bg-primary-secondBackground"
         />
       </div>
       <div className="mb-4">
@@ -67,7 +66,7 @@ export default function FormComponent() {
           id="message"
           name="message"
           required
-          className="border border-gray-300 rounded-md px-3 py-2 w-full"
+          className="rounded-md px-3 py-2 w-full bg-primary-secondBackground resize-none h-60"
         ></textarea>
       </div>
       <button
