@@ -39,7 +39,7 @@ export default function Home() {
             <div className="absolute left-0 right-0 bottom-0 top-0 bg-secondary-darkText/20" />
           </div>
         </div>
-        <div className="w-full relative overflow-hidden flex flex-row-reverse gap-5">
+        <div className="w-full relative overflow-hidden flex flex-row-reverse gap-10">
           <div className="md:w-4/5 flex flex-col justify-between">
             <section>
               <h4 className="mb-5 md:whitespace-nowrap text-[clamp(68px,10vw,140px)] leading-none w-full text-secondary-darkText border-b-2 md:pb-0 pb-5">

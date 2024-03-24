@@ -30,7 +30,12 @@ export default defineConfig({
               .title("Työnäytteet")
               .id("tyonaytteet")
               .icon(MdPostAdd)
-              .child(S.documentTypeList("tyonaytteet").title("Työnäytteet")),
+              .child(
+                S.document()
+                  .documentId("tyonaytteet")
+                  .schemaType("tyonaytteet")
+                  .title("Työnäytteet")
+              ),
             S.divider(),
             // Yhteitiedot
             S.listItem()
