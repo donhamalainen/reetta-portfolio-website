@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="fi" suppressHydrationWarning>
       <body
-        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${DarkerGrotesque.className} scroll-smooth overscroll-none`}
+        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${DarkerGrotesque.className}`}
       >
         <Navbar />
         <main>{children}</main>
