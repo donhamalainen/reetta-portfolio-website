@@ -6,13 +6,26 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
-      name: "image",
+      name: "kuvagalleriaKuva",
       title: "Kuva",
+      description:
+        "Anna kuva painamalla 'upload' tai valitse kuva jo valmiiksi tallennetuista painamalla 'select'",
+      validation: (rule) => rule.required(),
       type: "image",
       options: {
         hotspot: true,
       },
     }),
-    // Voit lisätä lisää kenttiä tarpeen mukaan
   ],
+  preview: {
+    select: {
+      media: "kuvagalleriaKuva",
+    },
+    prepare(selection) {
+      const { media } = selection;
+      return {
+        media: media,
+      };
+    },
+  },
 });

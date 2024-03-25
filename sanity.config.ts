@@ -3,10 +3,13 @@
  */
 
 import { visionTool } from "@sanity/vision";
-import { Preview, defineConfig } from "sanity";
+import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { RiContactsLine } from "react-icons/ri";
 import { MdPostAdd } from "react-icons/md";
+import { FaImage } from "react-icons/fa";
+import { FaRegNewspaper } from "react-icons/fa6";
+
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schema } from "./sanity/schema";
@@ -20,8 +23,12 @@ export default defineConfig({
   schema,
   document: {
     actions: (prev, context) => {
-      if (context.schemaType === "tyonaytteet") {
-        console.log(prev);
+      if (context.schemaType === "projektit") {
+        return prev.filter((obj) => obj.action !== "duplicate");
+      } else if (context.schemaType === "juttunaytteet") {
+        return prev.filter((obj) => obj.action !== "duplicate");
+      } else if (context.schemaType === "kuvagalleria") {
+        return prev.filter((obj) => obj.action !== "duplicate");
       }
       return prev;
     },
@@ -33,18 +40,6 @@ export default defineConfig({
         S.list()
           .title("Työpöytä")
           .items([
-            // Työnäytteet
-            S.listItem()
-              .title("Työnäytteet")
-              .id("tyonaytteet")
-              .icon(MdPostAdd)
-              .child(
-                S.document()
-                  .documentId("tyonaytteet")
-                  .schemaType("tyonaytteet")
-                  .title("Työnäytteet")
-              ),
-            S.divider(),
             // Yhteitiedot
             S.listItem()
               .title("Yhteistiedot")
@@ -55,6 +50,32 @@ export default defineConfig({
                   .documentId("yhteistiedot")
                   .schemaType("yhteistiedot")
                   .title("Yhteistiedot")
+              ),
+            S.divider(),
+            // Työnäytteet
+            S.listItem()
+              .title("Projektit")
+              .id("projektit")
+              .icon(MdPostAdd)
+              .child(S.documentTypeList("projektit").title("Projektilista")),
+
+            // Juttunäytteet
+            S.listItem()
+              .title("Juttunäytteet")
+              .id("juttunaytteet")
+              .icon(FaRegNewspaper)
+              .child(
+                S.documentTypeList("juttunaytteet").title("Juttunaytelista")
+              ),
+
+            // Kuvagalleria
+
+            S.listItem()
+              .title("Kuvagalleria")
+              .id("kuvagalleria")
+              .icon(FaImage)
+              .child(
+                S.documentTypeList("kuvagalleria").title("Kuvagallerialista")
               ),
           ]),
     }),
