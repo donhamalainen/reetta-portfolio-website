@@ -5,20 +5,23 @@ export default defineType({
   title: "Juttunäytteet",
   type: "document",
   fields: [
-    defineField({ name: "title", title: "Otsikko", type: "string" }),
     defineField({
-      name: "description",
-      title: "Kuvaus",
+      name: "juttunayteOtsikko",
+      title: "Jutun otikko",
+      type: "string",
+    }),
+    defineField({
+      name: "juttunayteKuvaus",
+      title: "Jutun kuvaus",
       type: "text",
     }),
     defineField({
-      name: "image",
-      title: "Kuva",
+      name: "juttunayteKuva",
+      title: "Jutun kuva",
       type: "image",
       options: {
         hotspot: true, // mahdollistaa kuvan kohdistuspisteen määrittelyn
       },
     }),
-    // Voit lisätä lisää kenttiä tarpeen mukaan
   ],
 });

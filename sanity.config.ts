@@ -18,6 +18,14 @@ export default defineConfig({
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
+  document: {
+    actions: (prev, context) => {
+      if (context.schemaType === "tyonaytteet") {
+        console.log(prev);
+      }
+      return prev;
+    },
+  },
   plugins: [
     structureTool({
       title: "Työpöytä",

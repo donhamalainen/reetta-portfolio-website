@@ -5,20 +5,63 @@ export default defineType({
   title: "Projektit",
   type: "document",
   fields: [
-    defineField({ name: "title", title: "Otsikko", type: "string" }),
     defineField({
-      name: "description",
-      title: "Kuvaus",
+      name: "projectTitle",
+      title: "Projektin otsikko",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "projectSlug",
+      title: "Projektiosoite",
+      type: "slug",
+      validation: (rule) => rule.required(),
+      options: {
+        source: "projectTitle",
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: "projectDescription",
+      title: "Projektin kuvaus",
       type: "text",
     }),
     defineField({
-      name: "image",
-      title: "Kuva",
+      name: "projectImage",
+      title: "Projektikuva",
       type: "image",
       options: {
         hotspot: true, // mahdollistaa kuvan kohdistuspisteen määrittelyn
       },
     }),
-    // Voit lisätä lisää kenttiä tarpeen mukaan
+    defineField({
+      name: "projectDate",
+      title: "Projektin päivämäärä",
+      type: "date",
+      options: {
+        dateFormat: "DD/MM/YYYY",
+      },
+    }),
   ],
+  preview: {
+    select: {
+      title: "projectTitle",
+      date: "projectDate",
+      media: "projectImage",
+    },
+    prepare(selection) {
+      const { title, date, media } = selection;
+      return {
+        title: title,
+        media: media,
+        subtitle: date
+          ? new Date(date).toLocaleDateString("fi-FI", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+            })
+          : "Julkaisupäivämäärä ei ole määritetty",
+      };
+    },
+  },
 });
