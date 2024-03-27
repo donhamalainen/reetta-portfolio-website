@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 // METADATA
@@ -8,7 +9,7 @@ export const metadata = {
 
 export default function Blog() {
   return (
-    <section className="px-10">
+    <section className="px-5 md:px-10">
       <div className="pb-5 border-b-2">
         <h1 className="text-[clamp(48px,5vw,120px)] leading-none font-bold text-secondary-darkText mb-10">
           Työnäytteet.
@@ -25,7 +26,23 @@ export default function Blog() {
           </p>
         </h2>
       </div>
-      <div></div>
+
+      <div className="grid grid-cols-3 mt-10 gap-5">
+        <Link
+          className="h-[250px] bg-secondary-lightText"
+          href="/juttunaytteet"
+        >
+          <h4>Juttunäytteet</h4>
+        </Link>
+
+        <Link className="h-[250px] bg-secondary-lightText" href="/projektit">
+          <h4>Projektit</h4>
+        </Link>
+
+        <Link className="h-[250px] bg-secondary-lightText" href="/kuvagalleria">
+          <h4>Kuvagalleria</h4>
+        </Link>
+      </div>
     </section>
   );
 }

@@ -13,14 +13,21 @@ const nextConfig = {
         destination: "/about",
       },
       {
-        source: "/tyonaytteet/:slug*",
-        destination: "/blog/:slug*", // Matched parameters can be used in the destination
+        source: "/tyonaytteet",
+        destination: "/blog", // Matched parameters can be used in the destination
       },
       {
-        source: "/cv",
-        destination: "/cv.pdf", // Matched parameters can be used in the destination
+        source: "/projektit/:slug*",
+        destination: "/projects/:slug*", // Matched parameters can be used in the destination
       },
-      // TODO: Lisää reittejä tarvittaessa
+      {
+        source: "/juttunaytteet/:slug*",
+        destination: "/reference/:slug*", // Matched parameters can be used in the destination
+      },
+      {
+        source: "/kuvagalleria",
+        destination: "/photogallery", // Matched parameters can be used in the destination
+      },
     ];
   },
 };

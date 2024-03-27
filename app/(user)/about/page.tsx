@@ -6,7 +6,7 @@ import Image from "next/image";
 import Picture from "@/public/images/yhteistiedot.jpg";
 export default function about() {
   return (
-    <section className="px-10">
+    <section className="px-5 md:px-10">
       <div className="md:grid md:grid-cols-2 flex flex-col relative gap-10">
         <div className="relative">
           <h1 className="text-[clamp(48px,5vw,120px)] leading-none font-bold text-secondary-darkText">
@@ -17,13 +17,6 @@ export default function about() {
             kanssasi!
           </h2>
           <div className="w-full h-[1px] bg-neutral-300 mb-10" />
-          <div className="h-[300px] w-full relative">
-            <Image
-              src={Picture}
-              alt=""
-              className="h-full w-full object-cover"
-            />
-          </div>
         </div>
 
         <FormComponent />

@@ -27,7 +27,7 @@ export default function Home() {
   // RETURN
   return (
     <>
-      <section className="px-10 h-full mb-10">
+      <section className="px-5 md:px-10 h-full mb-10">
         <div className="flex mb-5">
           <div className="relative lg:col-start-1 lg:col-end-12">
             <Image
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="w-full relative overflow-hidden flex flex-row-reverse gap-10">
           <div className="md:w-4/5 flex flex-col justify-between">
             <section>
-              <h4 className="mb-5 md:whitespace-nowrap text-[clamp(68px,10vw,140px)] leading-none w-full text-secondary-darkText border-b-2 md:pb-0 pb-5">
+              <h4 className="mb-5 md:whitespace-nowrap text-[clamp(50px,10vw,140px)] leading-none w-full text-secondary-darkText border-b-2 md:pb-0 pb-5">
                 Aidosti raikasta.
               </h4>
               <h1 className="text-[clamp(18px,5vw,24px)] whitespace-pre-line">

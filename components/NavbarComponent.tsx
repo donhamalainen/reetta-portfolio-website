@@ -62,7 +62,7 @@ export default function Navbar() {
   });
   // RETURN
   return (
-    <header id="header" className="px-10 py-2 mb-5">
+    <header id="header" className="px-5 md:px-10 py-2 mb-5">
       <div className="flex gap-10 items-center justify-between min-h-[60px]">
         <Link
           onClick={() => setIsMobile(false)}

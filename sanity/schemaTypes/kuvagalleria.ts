@@ -14,24 +14,24 @@ export default defineType({
         hotspot: true,
       },
     }),
-    defineField({
-      name: "kuvaAlt",
-      type: "string",
-      title: "Kuvateksti (ALT)",
-    }),
   ],
   preview: {
     select: {
       media: "kuva",
-      createdAt: "createdAt", // Lisätään createdAt valintoihin
+      createdAt: "_createdAt", // Lisätään createdAt valintoihin
     },
     prepare(selection) {
       const { media, createdAt } = selection;
       // Oletetaan, että createdAt on merkkijonomuodossa. Jos se on Date-objekti, muotoilu tarvitaan.
       return {
-        title: `Kuvagallerian kuva ${
-          Object.keys(media).length
-        } luotu ${createdAt}`,
+        title: `Kuva: ${Object.keys(media).length - 1}`,
+        subtitle: createdAt
+          ? new Date(createdAt).toLocaleDateString("fi-FI", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+            })
+          : "Ei vielä julkaistu",
         media: media,
       };
     },
