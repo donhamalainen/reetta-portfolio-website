@@ -6,24 +6,32 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
-      name: "kuvagalleriaKuva",
+      name: "kuva",
       title: "Kuva",
-      description:
-        "Anna kuva painamalla 'upload' tai valitse kuva jo valmiiksi tallennetuista painamalla 'select'",
-      validation: (rule) => rule.required(),
       type: "image",
+      validation: (rule) => rule.required(),
       options: {
         hotspot: true,
       },
     }),
+    defineField({
+      name: "kuvaAlt",
+      type: "string",
+      title: "Kuvateksti (ALT)",
+    }),
   ],
   preview: {
     select: {
-      media: "kuvagalleriaKuva",
+      media: "kuva",
+      createdAt: "createdAt", // Lisätään createdAt valintoihin
     },
     prepare(selection) {
-      const { media } = selection;
+      const { media, createdAt } = selection;
+      // Oletetaan, että createdAt on merkkijonomuodossa. Jos se on Date-objekti, muotoilu tarvitaan.
       return {
+        title: `Kuvagallerian kuva ${
+          Object.keys(media).length
+        } luotu ${createdAt}`,
         media: media,
       };
     },
