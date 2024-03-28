@@ -5,6 +5,9 @@ const nextConfig = {
     defaultLocale: 'fi',
     localeDetection: false,
   }, */
+  images: {
+    domains: ["cdn.sanity.io"],
+  },
   async rewrites() {
     return [
       // TODO
