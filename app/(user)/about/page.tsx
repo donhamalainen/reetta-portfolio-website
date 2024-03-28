@@ -13,8 +13,8 @@ export default function about() {
             Yhteistiedot.
           </h1>
           <h2 className="py-4 text-[clamp(38px,5vw,48px)] text-black">
-            Olen täynnä intoa ja iloa ajatellessani mahdollisuutta keskustella
-            kanssasi!
+            Ihana kuulla, että mielenkiintosi heräsi. Minuun voi olla yhteydessä
+            puhelimitse tai sähköpostitse!
           </h2>
           <div className="w-full h-[1px] bg-neutral-300 mb-10" />
         </div>

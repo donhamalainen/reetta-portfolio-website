@@ -24,7 +24,7 @@ export default defineType({
       const { media, createdAt } = selection;
       // Oletetaan, että createdAt on merkkijonomuodossa. Jos se on Date-objekti, muotoilu tarvitaan.
       return {
-        title: `Kuva: ${Object.keys(media).length - 1}`,
+        title: `Kuva`,
         subtitle: createdAt
           ? new Date(createdAt).toLocaleDateString("fi-FI", {
               year: "numeric",

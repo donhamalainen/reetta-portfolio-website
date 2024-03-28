@@ -78,7 +78,7 @@ export default function Navbar() {
               <Link href="/tyonaytteet">Työnäytteet</Link>
             </li>
             <li className="text-secondary-darkText text-lg">
-              <Link href="/yhteistiedot">Yhteistiedot</Link>
+              <Link href="/yhteistiedot">Yhteystiedot</Link>
             </li>
 
             {cvUrlLoading ? (
@@ -145,7 +145,7 @@ export default function Navbar() {
                 </li>
                 <li className="text-black text-4xl flex justify-center items-center">
                   <Link onClick={() => setIsMobile(false)} href="/yhteistiedot">
-                    Yhteistiedot
+                    Yhteystiedot
                   </Link>
                 </li>
 
