@@ -5,12 +5,12 @@ import Demo from "@/public/images/reettakuvablack.png";
 export default function Photogallery() {
   return (
     <section className="px-5 md:px-10">
-      <h1 className="text-[clamp(48px,5vw,120px)] leading-none font-bold text-secondary-darkText mb-10 flex items-center">
+      <h1 className="text-[clamp(48px,5vw,120px)] leading-none font-bold text-secondary-darkText mb-10 flex items-baseline">
         K
         <Image
           src={Demo}
           alt="demo"
-          className="h-[60px] w-fit object-cover rounded-br-xl rounded-bl-xl mx-2"
+          className="h-[40px] w-fit object-cover rounded-br-xl rounded-bl-xl mx-2"
         />
         vagalleria.
       </h1>
