@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* i18n: {
-    locales: ['en', 'fi'],
-    defaultLocale: 'fi',
-    localeDetection: false,
-  }, */
   images: {
-    domains: ["cdn.sanity.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   async rewrites() {
     return [

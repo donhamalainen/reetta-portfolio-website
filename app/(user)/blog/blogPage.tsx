@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Kuva from "@/public/images/reettakuvablack.png";
 import { urlForImage } from "@/sanity/lib/image";
+import { IoIosArrowForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export default function BlogPage({
   photogallery,
@@ -34,6 +36,7 @@ export default function BlogPage({
         <Link
           className="h-[250px] bg-secondary-lightText/50 relative"
           href="/juttunaytteet"
+          prefetch
         >
           <h4 className="flex justify-center items-center h-full text-[clamp(18px,5vw,28px)]">
             Juttunäytteet
@@ -46,6 +49,7 @@ export default function BlogPage({
         <Link
           className="h-[250px] bg-secondary-lightText/50 relative"
           href="/projektit"
+          prefetch
         >
           <h4 className="flex justify-center items-center h-full text-[clamp(18px,5vw,28px)]">
             Projektit
@@ -55,23 +59,23 @@ export default function BlogPage({
           </div>
         </Link>
 
-        <Link
-          className="h-[250px] bg-secondary-darkText/60 relative"
-          href="/kuvagalleria"
-        >
-          <h4 className="flex justify-center items-center h-full text-[clamp(18px,5vw,28px)] text-primary-background">
-            Kuvagalleria
-          </h4>
-          <div className="absolute top-0 left-0 bottom-0 right-0 -z-10">
-            <Image
-              src={urlForImage(photogallery.kuva.asset)}
-              alt=""
-              width={150}
-              height={150}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </Link>
+        <motion.div className="h-[250px] bg-secondary-darkText/60 relative cursor-pointer">
+          <Link href="/kuvagalleria" prefetch>
+            <h4 className="flex justify-center items-center h-full text-primary-background text-[clamp(18px,5vw,28px)]">
+              Kuvagalleria
+            </h4>
+
+            <div className="absolute top-0 left-0 bottom-0 right-0 -z-10">
+              <Image
+                src={urlForImage(photogallery.kuva.asset)}
+                alt=""
+                width={150}
+                height={150}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
