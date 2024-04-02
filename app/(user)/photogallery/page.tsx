@@ -19,7 +19,7 @@ export default function Photogallery() {
 
   return (
     <React.Fragment>
-      <ul className="grid grid-cols-3 gap-4">
+      <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
         {data.map((photo, index) => (
           <PhotogalleryComponents key={index} photo={photo} />
         ))}
