@@ -10,9 +10,6 @@ export default defineType({
       title: "Kuva",
       type: "image",
       validation: (rule) => rule.required(),
-      options: {
-        hotspot: true,
-      },
     }),
   ],
   preview: {

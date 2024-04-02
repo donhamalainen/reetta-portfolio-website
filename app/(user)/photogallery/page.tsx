@@ -1,37 +1,29 @@
-import React from "react";
-import Image from "next/image";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { client } from "@/sanity/lib/client";
 import { photogalleryQuery } from "@/libs/queries";
-import Demo from "@/public/images/reettakuvablack.png";
 import PhotogalleryComponents from "@/components/PhotogalleryComponents";
 
-async function photogalleryData() {
-  const latestPhotoData = await client.fetch(photogalleryQuery);
-  return latestPhotoData;
-}
+export default function Photogallery() {
+  const [data, setData] = useState([]);
 
-export default async function Photogallery() {
-  const data = await photogalleryData();
+  useEffect(() => {
+    async function fetchPhotogalleryData() {
+      const latestPhotoData = await client.fetch(photogalleryQuery);
+      setData(latestPhotoData);
+    }
+
+    fetchPhotogalleryData();
+  }, []); // Tyhjä riippuvuuslista tarkoittaa, että tämä suoritetaan vain komponentin mount-vaiheessa
+
   return (
-    <section className="px-5 md:px-10">
-      <h1 className="text-[clamp(48px,5vw,120px)] leading-none font-bold text-secondary-darkText mb-10 flex items-baseline">
-        K
-        <Image
-          src={Demo}
-          alt="demo"
-          className="h-[40px] w-fit object-cover rounded-br-xl rounded-bl-xl mx-2"
-          priority
-        />
-        vagalleria.
-      </h1>
-      <div className="w-full h-[1px] bg-neutral-300 mb-10" />
+    <React.Fragment>
       <ul className="grid grid-cols-3 gap-4">
-        {data.map((photo: any, index: React.Key) => (
-          <li key={index} className="">
-            <PhotogalleryComponents photo={photo} />
-          </li>
+        {data.map((photo, index) => (
+          <PhotogalleryComponents key={index} photo={photo} />
         ))}
       </ul>
-    </section>
+    </React.Fragment>
   );
 }

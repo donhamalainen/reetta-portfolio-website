@@ -1,6 +1,5 @@
 import { type SchemaTypeDefinition } from "sanity";
 import yhteistiedot from "./schemaTypes/yhteistiedot";
-
 // Työnaytteet schemas
 import projektit from "./schemaTypes/projektit";
 import juttunaytteet from "./schemaTypes/juttunaytteet";

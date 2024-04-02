@@ -43,7 +43,7 @@ export default function Navbar() {
     const intervalID = setInterval(() => {
       const intervalTime = getFinnishTime();
       setTime(intervalTime);
-    }, 500);
+    }, 1000);
     return () => clearInterval(intervalID);
   });
   // CHECK WIDTH
@@ -167,7 +167,7 @@ export default function Navbar() {
                 )}
                 <p
                   aria-label="hidden"
-                  className="absolute left-5 bottom-5 text-[clamp(48px,10vw,60px)] italic"
+                  className="absolute left-5 bottom-5 text-[clamp(48px,10vw,60px)] italic pr-2"
                 >
                   {time}
                 </p>

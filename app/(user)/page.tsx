@@ -75,7 +75,7 @@ export default function Home() {
                 href="/yhteistiedot"
                 className="text-[clamp(12px,5vw,18px)] bg-secondary-darkText text-white py-2 px-4 mt-10 w-1/2 text-center sm:w-fit"
               >
-                Yhteistiedot
+                Yhteystiedot
               </Link>
               <Link
                 href="/yhteistiedot"
