@@ -15,5 +15,5 @@ async function getLatestPhotoData() {
 }
 export default async function BlogLayout() {
   const photoData = await getLatestPhotoData();
-  return <Blog />;
+  return <Blog photogallery={photoData} />;
 }
