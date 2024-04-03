@@ -7,7 +7,7 @@ import Kuva from "@/public/images/reettakuvablack.png";
 import { urlForImage } from "@/sanity/lib/image";
 import { motion } from "framer-motion";
 
-function Blog({ photogallery }: { photogallery: any }) {
+export default async function Blog() {
   return (
     <section className="px-5 md:px-10">
       <div className="pb-5 border-b-2">
@@ -58,7 +58,7 @@ function Blog({ photogallery }: { photogallery: any }) {
 
             <div className="absolute top-0 left-0 bottom-0 right-0 -z-10">
               <Image
-                src={urlForImage(photogallery.kuva.asset)}
+                src={Kuva}
                 alt=""
                 width={150}
                 height={150}
@@ -71,5 +71,3 @@ function Blog({ photogallery }: { photogallery: any }) {
     </section>
   );
 }
-
-export default Blog;
