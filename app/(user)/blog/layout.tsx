@@ -13,4 +13,7 @@ async function getLatestPhotoData() {
   const latestPhotoData = await client.fetch(latestPhotogalleryQuery);
   return latestPhotoData;
 }
-export default Blog;
+export default async function BlogLayout() {
+  const photoData = await getLatestPhotoData();
+  return <Blog photogallery={photoData} />;
+}
