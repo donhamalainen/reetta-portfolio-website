@@ -7,7 +7,7 @@ import Kuva from "@/public/images/reettakuvablack.png";
 import { urlForImage } from "@/sanity/lib/image";
 import { motion } from "framer-motion";
 
-export default function Blog({photogallery}:{photogallery:any}) {
+export default function Blog({ photogallery }: { photogallery: any }) {
   return (
     <section className="px-5 md:px-10">
       <div className="pb-5 border-b-2">
