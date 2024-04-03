@@ -58,7 +58,7 @@ export default function Blog({ photogallery }: any) {
 
             <div className="absolute top-0 left-0 bottom-0 right-0 -z-10">
               <Image
-                src={Kuva}
+                src={urlForImage(photogallery.kuva.asset)}
                 alt=""
                 width={150}
                 height={150}
