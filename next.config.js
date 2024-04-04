@@ -24,8 +24,8 @@ const nextConfig = {
         destination: "/projects/:slug*", // Matched parameters can be used in the destination
       },
       {
-        source: "/juttunaytteet/:slug*",
-        destination: "/reference/:slug*", // Matched parameters can be used in the destination
+        source: "/juttunaytteet",
+        destination: "/reference", // Matched parameters can be used in the destination
       },
       {
         source: "/kuvagalleria",

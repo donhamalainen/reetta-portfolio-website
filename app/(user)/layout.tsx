@@ -18,6 +18,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: "",
     keywords: "",
+    openGraph: {
+      type: "website",
+      locale: "fi-FI",
+    },
   };
 }
 

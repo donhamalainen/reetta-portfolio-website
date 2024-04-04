@@ -20,3 +20,6 @@ export const getAboutData = groq`*[_type == "yhteistiedot"][0]{
   mail,
   phone
 }`;
+
+// Get news
+export const getNews = groq`*[_type == "juttunaytteet"]`;
