@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Key, useState } from "react";
 import Image from "next/image";
 import { urlForImage } from "@/sanity/lib/image";
+import { motion } from "framer-motion";
 
 function parseImageDimensions(ref: string) {
   // Etsi kuvaformaatti merkkijonosta: "-leveysxkorkeus.jpg"
@@ -18,12 +19,20 @@ function parseImageDimensions(ref: string) {
   // Oletusarvot, jos mittoja ei löydy: oletetaan vaakasuuntainen kuva
   return { width: 1, height: 0 }; // Width on suurempi kuin height, joten kuvan katsotaan olevan vaakasuuntainen
 }
-export default function PhotogalleryComponents({ photo }: { photo: any }) {
+export default function PhotogalleryComponents({
+  photo,
+  photoIndex,
+}: {
+  photo: any;
+  photoIndex: any;
+}) {
   const [isClicked, setIsClicked] = useState(false);
   const { width, height } = parseImageDimensions(photo.kuva.asset._ref);
   const isVertical = height > width; // Onko kuva pystysuuntainen
   return (
-    <li
+    <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.4 * photoIndex } }}
       className={`relative h-[250px] w-full cursor-pointer row-span-1 ${
         isVertical ? "sm:row-span-2 sm:h-full" : ""
       }`}
@@ -35,6 +44,7 @@ export default function PhotogalleryComponents({ photo }: { photo: any }) {
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="h-full w-full object-cover"
+        priority
       />
       {isClicked && (
         <div
@@ -50,10 +60,11 @@ export default function PhotogalleryComponents({ photo }: { photo: any }) {
               alt=""
               fill
               className="object-contain h-full w-full"
+              priority
             />
           </div>
         </div>
       )}
-    </li>
+    </motion.li>
   );
 }
