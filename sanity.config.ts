@@ -42,14 +42,14 @@ export default defineConfig({
           .items([
             // Yhteitiedot
             S.listItem()
-              .title("Yhteistiedot")
+              .title("Yhteystiedot")
               .id("yhteistiedot")
               .icon(RiContactsLine)
               .child(
                 S.document()
                   .documentId("yhteistiedot")
                   .schemaType("yhteistiedot")
-                  .title("Yhteistiedot")
+                  .title("Yhteystiedot")
               ),
             S.divider(),
             // Työnäytteet

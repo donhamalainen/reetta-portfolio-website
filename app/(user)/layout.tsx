@@ -2,26 +2,14 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import "@/styles/globals.css";
 
-import localFont from "next/font/local";
 import { Darker_Grotesque } from "next/font/google";
 import Navbar from "@/components/NavbarComponent";
 
-const AuthorVariable = localFont({
-  src: "../../public/fonts/Author-Variable.woff2",
-  display: "swap",
-  variable: "--font-AuthorVariable",
+const DarkerGrotesque = Darker_Grotesque({
+  subsets: ["latin"],
   preload: true,
-  adjustFontFallback: "Arial",
-});
-const AuthorVariableItalic = localFont({
-  src: "../../public/fonts/Author-VariableItalic.woff2",
   display: "swap",
-  variable: "--font-AuthorVariableItalic",
-  preload: true,
-  adjustFontFallback: "Arial",
 });
-
-const DarkerGrotesque = Darker_Grotesque({ subsets: ["latin"] });
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
@@ -47,11 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fi" suppressHydrationWarning>
-      <body
-        className={`${AuthorVariable.variable} ${AuthorVariableItalic.variable} ${DarkerGrotesque.className}`}
-      >
+      <body className={`${DarkerGrotesque.className}`}>
         <Navbar />
-        <main>{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );

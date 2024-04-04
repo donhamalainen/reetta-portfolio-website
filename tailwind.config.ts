@@ -11,7 +11,7 @@ const config: Config = {
       fontFamily: {
         author: ["var(--font-AuthorVariable)"],
         authorItalic: ["var(--font-AuthorVariableItalic)"],
-        melodrama: ["var(--font-MelodramaVariable)"],
+        darker: ["var()"],
       },
       colors: {
         secondary: {

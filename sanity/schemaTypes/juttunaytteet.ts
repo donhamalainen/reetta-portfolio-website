@@ -36,9 +36,6 @@ export default defineType({
       type: "image",
       description: "Lisää jutun kuva",
       validation: (rule) => rule.required(),
-      options: {
-        hotspot: true, // mahdollistaa kuvan kohdistuspisteen määrittelyn
-      },
     }),
     defineField({
       name: "juttunayteDate",
