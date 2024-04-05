@@ -15,6 +15,5 @@ async function FetchNews() {
 
 export default async function ReferenceLayout() {
   const data = await FetchNews();
-  console.log(data);
   return <Reference referenceData={data} />;
 }

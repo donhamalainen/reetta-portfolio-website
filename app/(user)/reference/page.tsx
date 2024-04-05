@@ -1,11 +1,7 @@
 import ReferenceComponent from "@/components/ReferenceComponent";
 import React from "react";
 
-export default async function Reference({
-  referenceData,
-}: {
-  referenceData: any[];
-}) {
+export default async function Reference({ referenceData }: any) {
   return (
     <section className="px-5 md:px-10">
       <div className="">
@@ -14,12 +10,15 @@ export default async function Reference({
             Juttunäytteet.
           </h1>
         </div>
-        <ReferenceComponent
-          otsikko={referenceData[0].juttunayteOtsikko}
-          slug={referenceData[0].juttunayteLinkki}
-          description={referenceData[0].juttunayteKuvaus}
-          index={1}
-        />
+        {referenceData.map((data: any, index: number) => (
+          <ReferenceComponent
+            otsikko={data.juttunayteOtsikko}
+            slug={data.juttunayteLinkki}
+            description={data.juttunayteKuvaus}
+            index={index + 1}
+            image={data.juttunayteKuva.asset}
+          />
+        ))}
       </div>
     </section>
   );
