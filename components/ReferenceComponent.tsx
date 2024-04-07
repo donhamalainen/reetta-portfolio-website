@@ -28,7 +28,7 @@ export default function ReferenceComponent({
         onClick={() => setIsHovered(!isHovered)}
       >
         <div className="grid grid-cols-[0.5fr,2fr,auto] gap-5 items-center">
-          <p className="text-4xl">{index}.</p>
+          <p className="text-xl">{index}.</p>
           <h3 className="text-left text-xl">{otsikko}</h3>
           <p className="text-right flex items-end text-lg">
             Lue
@@ -58,22 +58,28 @@ export default function ReferenceComponent({
         }
         className="overflow-hidden w-full"
       >
-        <div className="grid sm:grid-cols-3 justify-between gap-10 py-2">
-          <div className="col-start-1 col-end-3 flex flex-col justify-between space-y-4">
-            <div className=" space-y-5">
-              <h4 className="text-md md:text-lg">Seloste</h4>
+        <div className="grid sm:grid-cols-3 justify-between gap-5 sm:gap-10 py-2">
+          <div className="col-start-1 sm:col-end-3 flex flex-col justify-between space-y-4">
+            <div className="space-y-5 sm:space-y-2">
+              <h4 className="text-md md:text-lg font-bold">Kuvaus</h4>
               <p className="text-neutral-600 text-xl">{description}</p>
             </div>
-            <a className="text-lg" href={slug}>
-              {slug}
-            </a>
+            <div>
+              <h4 className="text-md md:text-lg mb-5 sm:mb-2 font-bold">
+                Linkki
+              </h4>
+              <a className="text-lg" href={slug}>
+                {slug}
+              </a>
+            </div>
           </div>
-          <div className="relative w-full h-[250px]">
+          <div className="relative w-full h-[200px] sm:h-[250px]">
             <Image
               src={urlForImage(image)}
               alt=""
               fill
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover h-full w-full"
             />
           </div>
         </div>

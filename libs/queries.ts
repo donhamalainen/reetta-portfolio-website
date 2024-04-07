@@ -23,3 +23,5 @@ export const getAboutData = groq`*[_type == "yhteistiedot"][0]{
 
 // Get news
 export const getNews = groq`*[_type == "juttunaytteet"]`;
+
+export const latestNewsQuery = groq`*[_type == "juttunaytteet"][0]`;
