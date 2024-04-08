@@ -14,7 +14,7 @@ export default function Projects({ projectData = [] }: any) {
               <ProjectComponent
                 otsikko={data.projectTitle}
                 teksti={data.projectDescription}
-                kuva={data.projectImage}
+                kuva={data.projectImage.asset}
                 slug={data.projectSlug.current}
               />
             </li>
