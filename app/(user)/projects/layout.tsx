@@ -7,12 +7,13 @@ export const metadata: Metadata = {
 };
 
 import { client } from "@/sanity/lib/client";
-import { getNews } from "@/libs/queries";
+import { projectQuery } from "@/libs/queries";
 async function FetchProjects() {
-  const fetchNews = await client.fetch(getNews);
-  return fetchNews;
+  const fetchProjects = await client.fetch(projectQuery);
+  return fetchProjects;
 }
 
 export default async function ProjectLayout() {
-  return <Project />;
+  const data = await FetchProjects();
+  return <Project projectData={data} />;
 }

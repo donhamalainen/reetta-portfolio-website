@@ -12,7 +12,7 @@ export const latestPhotogalleryQuery = groq`*[_type == "kuvagalleria"] | order(_
   kuva
 }`;
 
-export const photogalleryQuery = groq`*[_type == "kuvagalleria"]`;
+export const photogalleryQuery = groq`*[_type == "kuvagalleria"] | order(_createdAt desc)`;
 
 // Get About information
 

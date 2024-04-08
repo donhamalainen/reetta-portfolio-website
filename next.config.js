@@ -17,19 +17,19 @@ const nextConfig = {
       },
       {
         source: "/tyonaytteet",
-        destination: "/blog", // Matched parameters can be used in the destination
+        destination: "/blog",
       },
       {
-        source: "/projektit/:slug*",
-        destination: "/projects/:slug*", // Matched parameters can be used in the destination
+        source: "/projektit",
+        destination: "/projects",
       },
       {
         source: "/juttunaytteet",
-        destination: "/reference", // Matched parameters can be used in the destination
+        destination: "/reference",
       },
       {
         source: "/kuvagalleria",
-        destination: "/photogallery", // Matched parameters can be used in the destination
+        destination: "/photogallery",
       },
     ];
   },
