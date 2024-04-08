@@ -75,6 +75,9 @@ export default function Navbar() {
         <nav className="md:block hidden">
           <ul className="flex space-x-4 justify-end items-center">
             <li className="text-secondary-darkText text-lg">
+              <Link href="/">Etusivu</Link>
+            </li>
+            <li className="text-secondary-darkText text-lg">
               <Link href="/tyonaytteet">Työnäytteet</Link>
             </li>
             <li className="text-secondary-darkText text-lg">
@@ -137,13 +140,18 @@ export default function Navbar() {
               aria-label="hidden"
               className="fixed left-0 bottom-0 top-0 right-0 backdrop-blur-2xl bg-transparent z-40 w-full h-full"
             >
-              <ul className="h-full w-full relative grid grid-rows-4 pt-20">
-                <li className="text-black text-4xl flex justify-center items-center">
+              <ul className="h-full w-full relative grid grid-rows-5 pt-20">
+                <li className="text-black text-2xl flex justify-center items-center">
+                  <Link onClick={() => setIsMobile(false)} href="/">
+                    Etusivu
+                  </Link>
+                </li>
+                <li className="text-black text-2xl flex justify-center items-center">
                   <Link onClick={() => setIsMobile(false)} href="/tyonaytteet">
                     Työnäytteet
                   </Link>
                 </li>
-                <li className="text-black text-4xl flex justify-center items-center">
+                <li className="text-black text-2xl flex justify-center items-center">
                   <Link onClick={() => setIsMobile(false)} href="/yhteistiedot">
                     Yhteystiedot
                   </Link>
@@ -154,7 +162,7 @@ export default function Navbar() {
                 ) : cvUrl == null ? (
                   <></>
                 ) : (
-                  <li className="text-black text-4xl flex justify-center items-center">
+                  <li className="text-black text-2xl flex justify-center items-center">
                     <Link
                       onClick={() => setIsMobile(false)}
                       rel="noopener noreferrer"
@@ -167,7 +175,7 @@ export default function Navbar() {
                 )}
                 <p
                   aria-label="hidden"
-                  className="absolute left-5 bottom-5 text-[clamp(48px,10vw,60px)] italic pr-2"
+                  className="absolute left-5 bottom-5 text-[clamp(28px,10vw,48px)] italic pr-2"
                 >
                   {time}
                 </p>
