@@ -179,6 +179,18 @@ export default function Navbar() {
                 >
                   {time}
                 </p>
+                <p
+                  aria-label="hidden"
+                  className="absolute right-5 bottom-5 italic pr-2 text-secondary-darkText text-lg flex items-center p-2 border-2 border-secondary-darkText rounded-full"
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/reettasalmela/"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </p>
               </ul>
             </div>
           </>
