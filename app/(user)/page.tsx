@@ -36,6 +36,9 @@ export default function Home() {
               className="h-[clamp(450px,5vw,60vh)] object-cover object-[60%50%] md:object-center"
             />
             <div className="absolute left-0 right-0 bottom-0 top-0 bg-secondary-darkText/20" />
+            <p className="absolute right-5 bottom-5 text-white border-2 p-2">
+              Kuva: Miika Yliniemelä
+            </p>
           </div>
         </div>
         <div className="w-full relative overflow-hidden flex flex-row-reverse gap-10">
@@ -93,6 +96,9 @@ export default function Home() {
               priority
             />
             <div className="absolute left-0 right-0 bottom-0 top-0 bg-secondary-darkText/20" />
+            <p className="absolute right-5 bottom-5 text-white border-2 p-2">
+              Kuva: Jonna Karekivi
+            </p>
           </div>
         </div>
       </section>

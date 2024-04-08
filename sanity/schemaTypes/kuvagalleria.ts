@@ -15,7 +15,7 @@ export default defineType({
   preview: {
     select: {
       media: "kuva",
-      createdAt: "_createdAt", // Lisätään createdAt valintoihin
+      createdAt: "_createdAt",
     },
     prepare(selection) {
       const { media, createdAt } = selection;
