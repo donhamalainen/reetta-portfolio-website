@@ -36,7 +36,7 @@ export default function Home() {
               className="h-[clamp(450px,5vw,60vh)] object-cover object-[60%50%] md:object-center"
             />
             <div className="absolute left-0 right-0 bottom-0 top-0 bg-secondary-darkText/20" />
-            <p className="absolute right-5 bottom-5 text-neutral-600 border-neutral-600 border-2 p-2 text-xs">
+            <p className="absolute right-5 bottom-5 text-neutral-600 border-neutral-600 text-xs">
               Kuva: Miika Yliniemelä
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
               priority
             />
             <div className="absolute left-0 right-0 bottom-0 top-0 bg-secondary-darkText/20" />
-            <p className="absolute right-5 bottom-5 text-neutral-600 border-neutral-600 border-2 p-2 text-xs">
+            <p className="absolute right-5 bottom-5 text-neutral-600 border-neutral-600 text-xs">
               Kuva: Jonna Karekivi
             </p>
           </div>
