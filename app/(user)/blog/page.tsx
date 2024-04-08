@@ -15,11 +15,9 @@ export default function Blog({ data = [] }: any) {
           Työnäytteet.
         </h1>
         <h2 className="text-[clamp(18px,5vw,38px)]">
-          <p>
-            Tällä sivulla pääset tutustumaan työnäytteisiini. Kokemusta ja
-            näytteitä on kertynyt niin opintojen, kuin kesätöidenkin ajalta.
-            Olethan yhteydessä minuun, mikäli haluat nähdä lisää!
-          </p>
+          Tällä sivulla pääset tutustumaan työnäytteisiini. Kokemusta ja
+          näytteitä on kertynyt niin opintojen, kuin kesätöidenkin ajalta.
+          Olethan yhteydessä minuun, mikäli haluat nähdä lisää!
         </h2>
       </div>
 
