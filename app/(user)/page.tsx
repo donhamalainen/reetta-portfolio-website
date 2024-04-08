@@ -77,7 +77,7 @@ export default function Home() {
                 Yhteystiedot
               </Link>
               <Link
-                href="/yhteistiedot"
+                href="/tyonaytteet"
                 className="text-[clamp(12px,5vw,18px)] bg-secondary-darkText text-white py-2 px-4 mt-10 w-1/2 text-center sm:w-fit"
               >
                 Työnäytteet
