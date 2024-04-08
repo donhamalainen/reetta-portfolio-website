@@ -7,12 +7,17 @@ export const metadata: Metadata = {
 };
 
 import { client } from "@/sanity/lib/client";
-import { latestNewsQuery, latestPhotogalleryQuery } from "@/libs/queries";
+import {
+  latestNewsQuery,
+  latestPhotogalleryQuery,
+  latestProjectQuery,
+} from "@/libs/queries";
 
 async function getData() {
   const latestPhotoData = await client.fetch(latestPhotogalleryQuery);
   const latestNewsData = await client.fetch(latestNewsQuery);
-  return { latestNewsData, latestPhotoData };
+  const latestProject = await client.fetch(latestProjectQuery);
+  return { latestNewsData, latestPhotoData, latestProject };
 }
 
 export default async function BlogLayout() {

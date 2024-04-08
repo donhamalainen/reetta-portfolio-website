@@ -2,7 +2,6 @@ import ReferenceComponent from "@/components/ReferenceComponent";
 import React from "react";
 
 export default async function Reference({ referenceData = [] }: any) {
-  console.log(referenceData);
   return (
     <section className="px-5 md:px-10 mb-10">
       <div className="">

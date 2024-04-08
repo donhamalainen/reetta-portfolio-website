@@ -1,12 +1,11 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { homeText } from "@/libs/homeText";
-import { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { PortableText } from "@portabletext/react";
+import { useState, useEffect } from "react";
 import getFinnishTime from "@/hooks/getTime";
-
+import { motion } from "framer-motion";
+import TextSplitterReveal from "@/hooks/textSplitterReveal";
 // DEFAULT IMAGEAS
 import section_oneImage from "@/public/images/headerPic.jpg";
 import ReettaImage from "@/public/images/reettakuvablack.png";
@@ -29,7 +28,7 @@ export default function Home() {
     <>
       <section className="px-5 md:px-10 h-full mb-10">
         <div className="flex mb-5">
-          <div className="relative lg:col-start-1 lg:col-end-12">
+          <div className="relative lg:col-start-1 lg:col-end-12 overflow-hidden">
             <Image
               src={section_oneImage}
               alt="Kuva Reetta Salmela OAMK:in portaissa "
@@ -42,32 +41,32 @@ export default function Home() {
         <div className="w-full relative overflow-hidden flex flex-row-reverse gap-10">
           <div className="md:w-4/5 flex flex-col justify-between">
             <section>
-              <h4 className="mb-5 md:whitespace-nowrap text-[clamp(50px,10vw,140px)] leading-none w-full text-secondary-darkText border-b-2 md:pb-0 pb-5">
+              <h1 className="mb-5 md:whitespace-nowrap text-[clamp(50px,10vw,140px)] leading-none w-full text-secondary-darkText border-b-2 md:pb-0 pb-5">
                 Aidosti raikasta.
-              </h4>
-              <h1 className="text-[clamp(18px,5vw,24px)] whitespace-pre-line">
-                <p className="mb-5">
+              </h1>
+              <motion.h2 className="text-[clamp(18px,5vw,24px)] whitespace-pre-line space-y-5">
+                <p>
                   Moikka! Huippua, että olet täällä. Minä olen Reetta Salmela,
                   parikymppinen journalistiopiskelija Oulusta.
                 </p>
-                <p className="mb-5">
+                <p>
                   Kiinnostus yhteiskunnallisiin asioihin heräsi minulle jo
                   nuorena ja olen aina halunnut olla vaikuttajan asemassa. Tästä
                   kertoo pitkä taustani erilaisen yhdistystoiminnan ja
                   opiskelijakuntien jäsenenä.
                 </p>
-                <p className="mb-5">
+                <p>
                   Luonteeltani olen sosiaalinen ja puhelias. Lapsuuteni olen
                   viettänyt erilaisten pallopelien parissa ja kokemusta
                   tiimeissä toimimisesta löytyy sen ansiosta runsaasti. Innostun
                   asioista helposti ja pyrin toimimaan tehokkaasti edistääkseni
                   niitä.
                 </p>
-                <p className="mb-5">
+                <p>
                   Kerron mielelläni lisää, olethan minuun yhteydessä, mikäli
                   mielenkiinto heräsi!
                 </p>
-              </h1>
+              </motion.h2>
             </section>
 
             <div className="flex items-center sm:justify-end gap-2">
