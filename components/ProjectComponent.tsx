@@ -26,7 +26,7 @@ export default function ProjectComponent({
 
         <p>{slug}</p>
       </div>
-      <div className="h-full min-h-[200px] max-h-[300px] w-full relative col-start-4 col-span-4 sm:block hidden">
+      <div className="h-full min-h-[200px] max-h-[300px] w-full relative sm:col-start-4 sm:col-span-4 col-start-1 col-end-5">
         {(kuva && (
           <Image
             src={urlForImage(kuva)}
@@ -34,7 +34,7 @@ export default function ProjectComponent({
             priority
             alt=""
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-contain object-right-bottom"
+            className="object-contain object-left-bottom sm:object-right-bottom"
           />
         )) ||
           null}
