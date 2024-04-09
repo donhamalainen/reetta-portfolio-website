@@ -53,17 +53,18 @@ export default function Home() {
                   parikymppinen journalistiopiskelija Oulusta.
                 </p>
                 <p>
+                  16Personalities -testin mukaan olen Protagonisti, eli
+                  inspiroiva optimisti, ja 94 prosenttia ekstrovertti. Lisäksi
+                  testi kertoo, että elän tunteella, mutta suunnitelmallisesti.
+                  Näin olen kuullut myös ystävieni minun kuvailevan -
+                  ”sosiaalinen ja helposti innostuva tyyppi, joka on aina
+                  menossa.”
+                </p>
+                <p>
                   Kiinnostus yhteiskunnallisiin asioihin heräsi minulle jo
                   nuorena ja olen aina halunnut olla vaikuttajan asemassa. Tästä
                   kertoo pitkä taustani erilaisen yhdistystoiminnan ja
-                  opiskelijakuntien jäsenenä.
-                </p>
-                <p>
-                  Luonteeltani olen sosiaalinen ja puhelias. Lapsuuteni olen
-                  viettänyt erilaisten pallopelien parissa ja kokemusta
-                  tiimeissä toimimisesta löytyy sen ansiosta runsaasti. Innostun
-                  asioista helposti ja pyrin toimimaan tehokkaasti edistääkseni
-                  niitä.
+                  opiskelijakuntien parissa.
                 </p>
                 <p>
                   Kerron mielelläni lisää, olethan minuun yhteydessä, mikäli
