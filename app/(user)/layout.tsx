@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s | Reetta Salmela",
     },
     description: "",
-    keywords: "",
+    keywords: "portfolio",
     openGraph: {
       type: "website",
       locale: "fi-FI",
